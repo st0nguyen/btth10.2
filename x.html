@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let nums = [];
+        for (let i = 0; i < 100; ++i) {
+            nums[i] = Math.floor(Math.random() * 101);
+        }
+        console.log(nums.length);
+      
+
+        function searchNum(arr, data) {
+            let count = 0;
+            console.log(arr.length);
+            for (let j = 0; j < arr.length; j++) {
+                
+                if (arr[j] == data) {
+                    
+
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        function dispArr(arr) {
+            for (let i = 0; i < arr.length; ++i) {
+                document.write(arr[i] + "&nbsp ");
+                if (i % 10 == 9) {
+                    document.write("</br>");
+                }
+            }
+            // if (i % 10 != 0) {
+            //     document.write("</br>");
+            // }
+        } 
+
+        
+        
+document.write('count: '+searchNum(nums, 0) +'<br>');
+dispArr(nums);
+    </script>
+</body>
+
+</html>
